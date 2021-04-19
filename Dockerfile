@@ -22,10 +22,12 @@ FROM arillso/ansible:2.10.3 as production
 # Copy binary from build to main folder
 COPY --from=builder /build/main /usr/local/bin
 
-RUN apk add curl
-
 # Run as root
 USER root
+
+# Install deps
+RUN apk --update --no-cache add \
+  curl
 
 # Command to run when starting the container
 CMD ["main"]
