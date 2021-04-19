@@ -28,7 +28,8 @@ USER root
 # Install deps
 RUN apk --update --no-cache add \
   bash \
-  curl
+  curl \
+  nodejs
 
 # Command to run when starting the container
 CMD ["main"]
