@@ -29,7 +29,8 @@ USER root
 RUN apk --update --no-cache add \
   bash \
   curl \
-  nodejs
+  nodejs \
+  npm
 
 # Command to run when starting the container
 CMD ["main"]
