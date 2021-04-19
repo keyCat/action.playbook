@@ -27,6 +27,7 @@ USER root
 
 # Install deps
 RUN apk --update --no-cache add \
+  bash
   curl
 
 # Command to run when starting the container
